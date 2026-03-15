@@ -1,4 +1,5 @@
- export const categories = [
+import React from 'react'
+export const categories = [
   { name: 'New', icon: '🏠' },
   { name: 'Coding', icon: '💻' },
   { name: 'Music', icon: '🎵' },
