@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 import VideoCard from '../components/VideoCard'
 import Loader from '../components/Loader'
 import { categories } from '../components/Sidebar'
-import {fetchAPI} from '../utils/fetchAPI'
+import { fetchFromAPI } from '../utils/fetchFromAPI'
 
 function Feed({ selectedCategory, setSelectedCategory }) {
   return (
