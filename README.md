@@ -1,18 +1,32 @@
-# React + Vite
+# Youtube Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+a youtube clone platform built with react and the youtube rapidi api. 
 
-Currently, two official plugins are available:
+## Features 
+- Browse videos by category like (news,music,beauty,sport,etc...)
+- Search for video and channel with live suggestiobs
+- View video statistics including views and likes
+- Fully responsive accross mobile, tablet and desktop
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
 
-## React Compiler
+- React + vite
+- Tailwind css
+- Axios + Tanstack query
+- React Router Dom
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## How To run this project locally
 
-Note: This will impact Vite dev & build performances.
+1. clone the repository
 
-## Expanding the ESLint configuration
+git clone https://github.com/CherlyIC/youtube-clone.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies
+
+npm install 
+
+3. Start the development server
+
+npm run dev
+
+

@@ -21,8 +21,8 @@ function Feed({ selectedCategory, setSelectedCategory }) {
         />
       </div>
       <div className="flex-1 px-4 py-6 overflow-y-auto">
-        <h2 className='text-white text-2xl font-bold mb-6'>{selectedCategory}
-          videos
+        <h2 className='text-black dark:text-white text-2xl font-bold mb-6'>
+          {selectedCategory} <span className="text-red-600">videos</span>
         </h2>
 
         <div>
@@ -31,8 +31,8 @@ function Feed({ selectedCategory, setSelectedCategory }) {
               key={category.name}
               onClick={() => setSelectedCategory(category.name)}
               className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${selectedCategory === category.name
-                            ? 'bg-white text-black'
-                            : 'bg-zinc-800 text-white hover:bg-zinc-700'
+                            ? 'bg-black text-white dark:bg-white dark:text-black'
+                            : 'bg-zinc-100 text-black dark:bg-[#272727] dark:text-white hover:bg-zinc-200 dark:hover:bg-[#373737]'
                           }`}
             >
               {category.name}
@@ -43,7 +43,7 @@ function Feed({ selectedCategory, setSelectedCategory }) {
         {isLoading && <Loader />}
         {isError && ( <div className="text-center mt-20">
           <p className="text-red-500 text-xl">Something went wrong</p>
-          <p className='text-zinc-400 mt-2'>please check your internet </p>
+          <p className='text-zinc-600 dark:text-zinc-400 mt-2'>please check your internet </p>
         </div>)}
 
          {!isLoading && !isError && (
