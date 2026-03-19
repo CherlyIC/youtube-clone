@@ -1,8 +1,10 @@
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { fetchFromAPI } from '../utils/fetchFromAPI'
 import VideoCard from '../components/VideoCard'
 import Loader from '../components/Loader'
+
 
 function ChannelDetails() {
   const { id } = useParams()
@@ -41,7 +43,6 @@ function ChannelDetails() {
   return (
     <div className="bg-black min-h-screen">
 
-      {/* Channel Banner */}
       <div className="w-full h-40 md:h-56 lg:h-64 overflow-hidden">
         <img
           src={snippet?.brandingSettings?.image?.bannerExternalUrl ||
@@ -55,7 +56,6 @@ function ChannelDetails() {
       <div className="flex flex-col sm:flex-row items-center
                       gap-4 px-6 py-6 border-b border-zinc-800">
 
-        {/* Channel Avatar */}
         <img
           src={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
@@ -67,7 +67,6 @@ function ChannelDetails() {
           }}
         />
 
-        {/* Channel Name + Subscribers */}
         <div className="text-center sm:text-left">
           <h1 className="text-white text-2xl font-bold">
             {snippet?.title}
@@ -84,7 +83,6 @@ function ChannelDetails() {
 
       </div>
 
-      {/* Channel Videos */}
       <div className="px-6 py-6">
         <h2 className="text-white text-xl font-bold mb-6">
           Latest <span className="text-red-600">Videos</span>

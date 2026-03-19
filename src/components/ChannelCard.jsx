@@ -1,12 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-export {Navbar} from './Navbar'
-export {SearchBar} from './SearchBar'
-export {Loader} from './Loader'
-export {ChannelCard} from './ChannelCard'
-export {VideoCard} from './VideoCard'
-export {VideoPlayer} from './VideoPlayer'
-export {Sidebar} from './Sidebar'
+
 
 
 function ChannelCard({ channel }) {

@@ -1,4 +1,5 @@
-import { useParams, Link } from 'react-router-dom'
+import React from 'react'
+import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { fetchFromAPI } from '../utils/fetchFromAPI'
 import VideoCard from '../components/VideoCard'
