@@ -1,10 +1,9 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { fetchFromAPI } from '../utils/fetchFromAPI'
 import VideoCard from '../components/VideoCard'
 import Loader from '../components/Loader'
-import ReactPlayer from 'react-player'
 
 function VideoDetails() {
   const { id } = useParams()
@@ -45,15 +44,21 @@ function VideoDetails() {
 
       <div className="flex-1">
 
-        <div className="w-full rounded-xl overflow-hidden bg-zinc-900">
-          <ReactPlayer
-            url={`https://www.youtube.com/watch?v=${id}`}
-            controls
-            playing
-            width="100%"
-            height="500px"
-          />
-        </div>
+        <div className="w-full rounded-xl overflow-hidden bg-zinc-900"
+     style={{ aspectRatio: '16/9' }}>
+  <iframe
+    width="100%"
+    height="100%"
+    src={`https://www.youtube.com/embed/${id}?autoplay=1&controls=1&rel=0`}
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; 
+           encrypted-media; gyroscope; picture-in-picture; 
+           fullscreen"
+    allowFullScreen
+    style={{ minHeight: '400px' }}
+  />
+</div>
 
         <h1 className="text-white text-xl font-bold mt-4 leading-snug">
           {snippet?.title}
@@ -73,12 +78,12 @@ function VideoDetails() {
           <div className="flex gap-4">
             <div className="bg-zinc-800 px-4 py-2 rounded-full">
               <span className="text-white text-sm">
-                👁 {parseInt(statistics?.viewCount).toLocaleString()} views
+                👁 {parseInt(statistics?.viewCount || 0).toLocaleString()} views
               </span>
             </div>
             <div className="bg-zinc-800 px-4 py-2 rounded-full">
               <span className="text-white text-sm">
-                👍 {parseInt(statistics?.likeCount).toLocaleString()} likes
+                👍 {parseInt(statistics?.likeCount || 0).toLocaleString()} likes
               </span>
             </div>
           </div>

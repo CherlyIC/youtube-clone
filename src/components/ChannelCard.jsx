@@ -9,9 +9,9 @@ function ChannelCard({ channel }) {
   return (
     <Link to={`/channel/${channelId}`}>
       <div className="flex flex-col items-center justify-center
-                      bg-zinc-900 rounded-xl p-6 gap-3
-                      hover:bg-zinc-800 transition-all duration-200
-                      cursor-pointer">
+                      bg-zinc-50 dark:bg-[#181818] rounded-xl p-6 gap-3
+                      hover:bg-zinc-100 dark:hover:bg-[#272727] transition-all duration-200
+                      cursor-pointer shadow-sm dark:shadow-none">
 
         <img
           src={channel?.snippet?.thumbnails?.high?.url}
@@ -25,10 +25,10 @@ function ChannelCard({ channel }) {
         />
 
         <div className="text-center">
-          <h3 className="text-white font-bold text-sm">
+          <h3 className="text-black dark:text-white font-bold text-sm">
             {channel?.snippet?.title}
           </h3>
-          <p className="text-zinc-400 text-xs mt-1">
+          <p className="text-zinc-500 dark:text-zinc-400 text-xs mt-1">
             {parseInt(channel?.statistics?.subscriberCount)
               .toLocaleString()} subscribers
           </p>
