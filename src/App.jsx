@@ -6,6 +6,7 @@ import Feed from './pages/Feed'
 import VideoDetails from './pages/VideoDetails'
 import ChannelDetails from './pages/ChannelDetails'
 import SearchResults from './pages/SearchResults'
+import Navbar from './components/Navbar'
 
 
 const queryClient = new QueryClient()
@@ -17,6 +18,10 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <div className="bg-black min-h-screen text-white">
+           <Navbar
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
           <Routes>
              <Route
               path="/"

@@ -24,7 +24,7 @@ const SearchBar = () => {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyPress}
         placeholder="Search..."
         className="bg-zinc-900 text-white px-4 py-2 rounded-l-full 
                    border border-zinc-700 outline-none w-64 
