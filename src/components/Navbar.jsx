@@ -13,7 +13,7 @@ const Navbar = ({selectedCategory, setSelectedCategory }) => {
       <nav className="sticky top-0 z-50 bg-black flex items-center justify-between px-6 py-3 border-b border-zinc-800">
         <div className='flex items-center gap-4'>
           <button className='md:hidden text-white text-2xl' onClick={() => setMobileMenu(!mobileMenu)}>
-            {mobileMenu ? '✖️' : '☰'}
+            {mobileMenu ? '✖️' : '☰' }
 
           </button>
 
